@@ -32,7 +32,7 @@ class MainPage extends StatelessWidget {
         height: double.infinity,
 
         // Imagem de fundo da tela.
-        // Placeholder: enquanto não existir assets/images/fundo.jpg,
+        // Placeholder: enquanto não existir assets/images/fundo.png,
         // o errorBuilder mostra uma cor sólida no lugar da imagem.
         decoration: const BoxDecoration(
           color: Colors.indigo,
@@ -41,7 +41,7 @@ class MainPage extends StatelessWidget {
           children: [
             Positioned.fill(
               child: Image.asset(
-                'assets/images/fundo.jpg',
+                'assets/images/fundo.png',
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(color: Colors.indigo.shade700);
