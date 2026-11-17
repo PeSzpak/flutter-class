@@ -9,6 +9,7 @@ void main() {
 
     // Tela 1 - Início.
     expect(find.text('App de Tarefas'), findsOneWidget);
+    expect(find.text('Olá, Pedro Szpak!'), findsOneWidget);
     expect(find.text('Minhas tarefas'), findsOneWidget);
     expect(find.text('Sobre'), findsOneWidget);
 
@@ -34,5 +35,6 @@ void main() {
     await tester.tap(find.text('Voltar'));
     await tester.pumpAndSettle();
     expect(find.text('App de Tarefas'), findsOneWidget);
+    expect(find.text('Olá, Pedro Szpak!'), findsOneWidget);
   });
 }
