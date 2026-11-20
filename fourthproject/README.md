@@ -1,17 +1,16 @@
-# fourthproject
+# StudyFlow
 
-A new Flutter project.
+Organizador de atividades de estudo.
 
-## Getting Started
+<img src="../docs/media/studyflow-cadastro.webp" width="240" alt="Formulário de nova atividade com disciplina, nome, data, prioridade e checkbox de importante">
 
-This project is a starting point for a Flutter application.
+- **Lista** (`atividades_tela.dart`): resumo com total, pendentes e concluídas; concluir e excluir (com desfazer no SnackBar).
+- **Cadastro** (`cadastro_tela.dart`): disciplina, nome, data de entrega (`showDatePicker`), prioridade (`DropdownButton`) e "importante" (`CheckboxListTile`).
+- **Detalhes** (`detalhes_tela.dart`): todos os campos da atividade, aberta pelo `Navigator`.
+- Modelo em `lib/atividade.dart`; os dados ficam em memória.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+flutter test
+flutter run   # ou: flutter run -d chrome
+```
