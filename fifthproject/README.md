@@ -1,17 +1,17 @@
-# fifthproject
+# Consumo de APIs: CEP, CNPJ e clientes
 
-A new Flutter project.
+App com três abas (`NavigationBar`):
 
-## Getting Started
+<img src="../docs/media/consulta-cep.webp" width="240" alt="Consulta do CEP 01310-100 mostrando Avenida Paulista, Bela Vista, São Paulo">
 
-This project is a starting point for a Flutter application.
+- **CEP:** busca o endereço na [ViaCEP](https://viacep.com.br) (`https://viacep.com.br/ws/{cep}/json/`).
+- **CNPJ:** busca a empresa na [BrasilAPI](https://brasilapi.com.br) (`https://brasilapi.com.br/api/cnpj/v1/{cnpj}`).
+- **Clientes:** cadastro com nome, CPF (11 dígitos), e-mail e telefone, guardado em memória. A versão que salva no Supabase é o [`sixthproject/`](../sixthproject).
 
-A few resources to get you started if this is your first Flutter project:
+As chamadas HTTP ficam em `lib/consulta_service.dart` (pacote `http`), com mensagens para CEP incompleto ou não encontrado, CNPJ inválido (dígitos verificadores conferidos no app) e falta de internet. As duas APIs são públicas e não pedem chave.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+flutter test
+flutter run   # ou: flutter run -d chrome
+```

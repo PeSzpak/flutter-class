@@ -1,17 +1,19 @@
-# thirdproject
+# Aplicativo de Tarefas V2
 
-A new Flutter project.
+Evolução do [`secondproject/`](../secondproject): três telas (Início, Tarefas, Sobre) com estado compartilhado.
 
-## Getting Started
+| Início | Tarefas |
+|---|---|
+| <img src="../docs/media/tarefas-v2-inicio.webp" width="240" alt="Tela inicial com saudação e contadores de tarefas"> | <img src="../docs/media/tarefas-v2-lista.webp" width="240" alt="Lista com duas tarefas de prioridade média"> |
 
-This project is a starting point for a Flutter application.
+- Prioridade Baixa, Média ou Alta (`SegmentedButton`) ao criar e ao editar.
+- Concluir com checkbox, editar em diálogo, excluir com aviso no SnackBar.
+- Filtros Todas, Pendentes e Concluídas, e contador de concluídas e pendentes.
+- Tema claro e escuro alternado pelo botão no canto da tela inicial.
+- Modelo em `lib/tarefa.dart`; as tarefas ficam em memória.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+flutter test
+flutter run   # ou: flutter run -d chrome
+```
